@@ -17,7 +17,12 @@
         -webkit-appearance: none;
         width: 115px;
         height: 7px;
-        background: $color-orange;
+        background-color: $color-orange;
         border-radius: 5px;
+
+        &:hover {
+            cursor: pointer;
+            background-color: $color-green;
+        }
     }
 }

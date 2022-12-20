@@ -297,8 +297,12 @@ p,
   -webkit-appearance: none;
   width: 115px;
   height: 7px;
-  background: #FE9013;
+  background-color: #FE9013;
   border-radius: 5px;
+}
+.scroll-line::-webkit-slider-thumb:hover {
+  cursor: pointer;
+  background-color: #4B9200;
 }
 
 .animals-cards {
