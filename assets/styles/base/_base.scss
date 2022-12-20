@@ -1,3 +1,7 @@
+html {
+    scroll-behavior: smooth;
+}
+
 * {
     box-sizing: border-box;
 }
@@ -27,7 +31,23 @@ a  {
         background-clip: text;
         text-emphasis-color: transparent;
     }
-    &:active {
-        cursor: default;
+}
+
+.social:hover {
+    .social__logo {
+        background-color: $color-orange;
+    }
+}
+
+.social:active {
+    .social__logo {
+        background-color: $color-green;
+    }
+    .social__name {
+        background: $color-green;
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        background-clip: text;
+        text-emphasis-color: transparent;
     }
 }

@@ -32,6 +32,89 @@
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: space-between;
+
+    position: relative;
+
+    .pop-info {
+        display: none;
+        color: $color-orange;
+        padding: 10px;
+
+        position: absolute;
+        right: 10px;
+
+        border: 2px solid $color-orange;
+        border-radius: 10px;
+
+        & > * {
+            margin-left: auto;
+        }
+    }
+
+    &:hover {
+        cursor: pointer;
+        background: $gradient-orange;
+
+        & > .animal-card__image {
+            animation-name: image-animation;
+            animation-duration: 1s;
+            background-size: 386px;
+            filter: brightness(50%);
+        }
+
+        .pop-info {
+            display: inline-block;
+            animation-name: show-pop-info;
+            animation-duration: 1s;
+            transform: translateY(250px);
+        }
+    }
+}
+
+@keyframes show-pop-info {
+    from {
+        transform: translateY(400px);
+    }
+    to {
+        transform: translateY(250px);
+    }
+}
+
+@keyframes image-animation {
+    from {
+        background-size: 366px;
+    }
+    to {
+        background-size: 386px;
+        filter: brightness(50%);
+    }
+}
+
+.animal-card__image {
+    width: 366px;
+    height: 366px;
+    @include image(url("../images/panda.jpg"), 366px, 366px);
+    content: "";
+}
+
+.animal-card:nth-child(2) > .animal-card__image  {
+    @include image(url("../images/eagle.jpg"), 366px, 366px);
+}
+
+.animal-card:nth-child(3) > .animal-card__image  {
+    @include image(url("../images/gorilla.jpg"), 366px, 366px);
+}
+
+.animal-card:nth-child(4) > .animal-card__image  {
+    @include image(url("../images/sloth.jpg"), 366px, 366px);
+}
+
+.animal-card:nth-child(5) > .animal-card__image  {
+    @include image(url("../images/cheetahs.jpg"), 366px, 366px);
+}
+
+.animal-card:nth-child(6) > .animal-card__image  {
+    @include image(url("../images/penguins.jpg"), 366px, 366px);
 }
 
 .animal-card__info {

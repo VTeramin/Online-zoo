@@ -1,15 +1,23 @@
 .scroll-line {
+    -webkit-appearance: none;
     width: 599px;
     height: 8px;
-    @include gradient-border($gradient-pink, 20px, $color-gray-light, 2px);
+    display: block;
+
+    @include gradient-border($gradient-pink, 5px, $color-gray-light, 0.5px);
     background-color: $color-scroll-line;
     border-radius: 5px;
-}
-
-.scroll-line__slider {
-    width: 115px;
-    height: 100%;
-    background: $color-orange;
-    border-radius: 5px;
-    margin: auto 0px;
+    
+    &::-webkit-slider-runnable-track {
+        -webkit-appearance: none;
+        width: max-content;
+        height: 7px;
+    }
+    &::-webkit-slider-thumb {
+        -webkit-appearance: none;
+        width: 115px;
+        height: 7px;
+        background: $color-orange;
+        border-radius: 5px;
+    }
 }

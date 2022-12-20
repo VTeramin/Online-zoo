@@ -1,3 +1,7 @@
+html {
+  scroll-behavior: smooth;
+}
+
 * {
   box-sizing: border-box;
 }
@@ -27,8 +31,20 @@ a:hover {
   background-clip: text;
   text-emphasis-color: transparent;
 }
-a:active {
-  cursor: default;
+
+.social:hover .social__logo {
+  background-color: #FE9013;
+}
+
+.social:active .social__logo {
+  background-color: #4B9200;
+}
+.social:active .social__name {
+  background: #4B9200;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  text-emphasis-color: transparent;
 }
 
 html {
@@ -76,7 +92,8 @@ h2 {
   line-height: 120%;
 }
 
-h3 {
+h3,
+.pop-info__name {
   font-weight: 400;
   font-size: 3.6rem;
   line-height: 130%;
@@ -258,10 +275,12 @@ p,
 }
 
 .scroll-line {
+  -webkit-appearance: none;
   width: 599px;
   height: 8px;
-  border: 2px solid transparent;
-  border-radius: 20px;
+  display: block;
+  border: 0.5px solid transparent;
+  border-radius: 5px;
   background-image: linear-gradient(#F1F3F2, #F1F3F2), linear-gradient(315.75deg, rgba(254, 189, 171, 0.74) 30.06%, rgba(243, 169, 248, 0.66) 50.74%, #E0D8F0 80.49%, #EAF7FE 127.9%, #EAF7FE 149.54%), linear-gradient(315.75deg, rgba(254, 189, 171, 0.74) 30.06%, rgba(243, 169, 248, 0.66) 50.74%, #E0D8F0 80.49%, #EAF7FE 127.9%, #EAF7FE 149.54%);
   background-origin: border-box;
   background-clip: padding-box, border-box;
@@ -269,13 +288,17 @@ p,
   background-color: #F5F7F6;
   border-radius: 5px;
 }
-
-.scroll-line__slider {
+.scroll-line::-webkit-slider-runnable-track {
+  -webkit-appearance: none;
+  width: max-content;
+  height: 7px;
+}
+.scroll-line::-webkit-slider-thumb {
+  -webkit-appearance: none;
   width: 115px;
-  height: 100%;
+  height: 7px;
   background: #FE9013;
   border-radius: 5px;
-  margin: auto 0px;
 }
 
 .animals-cards {
@@ -312,6 +335,103 @@ p,
   flex-direction: row;
   flex-wrap: wrap;
   justify-content: space-between;
+  position: relative;
+}
+.animal-card .pop-info {
+  display: none;
+  color: #FE9013;
+  padding: 10px;
+  position: absolute;
+  right: 10px;
+  border: 2px solid #FE9013;
+  border-radius: 10px;
+}
+.animal-card .pop-info > * {
+  margin-left: auto;
+}
+.animal-card:hover {
+  cursor: pointer;
+  background: linear-gradient(113.96deg, #F9804B 1.49%, #FE9013 101.44%);
+}
+.animal-card:hover > .animal-card__image {
+  animation-name: image-animation;
+  animation-duration: 1s;
+  background-size: 386px;
+  filter: brightness(50%);
+}
+.animal-card:hover .pop-info {
+  display: inline-block;
+  animation-name: show-pop-info;
+  animation-duration: 1s;
+  transform: translateY(250px);
+}
+
+@keyframes show-pop-info {
+  from {
+    transform: translateY(400px);
+  }
+  to {
+    transform: translateY(250px);
+  }
+}
+@keyframes image-animation {
+  from {
+    background-size: 366px;
+  }
+  to {
+    background-size: 386px;
+    filter: brightness(50%);
+  }
+}
+.animal-card__image {
+  width: 366px;
+  height: 366px;
+  background-image: url("../images/panda.jpg");
+  width: 366px;
+  height: 366px;
+  background-position: center;
+  background-repeat: no-repeat;
+  content: "";
+}
+
+.animal-card:nth-child(2) > .animal-card__image {
+  background-image: url("../images/eagle.jpg");
+  width: 366px;
+  height: 366px;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.animal-card:nth-child(3) > .animal-card__image {
+  background-image: url("../images/gorilla.jpg");
+  width: 366px;
+  height: 366px;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.animal-card:nth-child(4) > .animal-card__image {
+  background-image: url("../images/sloth.jpg");
+  width: 366px;
+  height: 366px;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.animal-card:nth-child(5) > .animal-card__image {
+  background-image: url("../images/cheetahs.jpg");
+  width: 366px;
+  height: 366px;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.animal-card:nth-child(6) > .animal-card__image {
+  background-image: url("../images/penguins.jpg");
+  width: 366px;
+  height: 366px;
+  background-position: center;
+  background-repeat: no-repeat;
 }
 
 .animal-card__info {
@@ -474,6 +594,42 @@ p,
   margin-right: 10px;
 }
 
+.email-input {
+  width: 228px;
+  height: 42px;
+  padding: 10px 7px 10px 10px;
+  border: 0.7px solid transparent;
+  border-radius: 2px;
+  background-image: linear-gradient(#000000, #000000), linear-gradient(113.96deg, #F9804B 1.49%, #FE9013 101.44%);
+  background-origin: border-box;
+  background-clip: padding-box, border-box;
+  overflow: hidden;
+  color: #BDBDBD;
+}
+.email-input:focus:invalid {
+  outline: none;
+  border-color: #D31414;
+}
+.email-input:valid {
+  outline: none;
+  border-color: #4B9200;
+  background: #000000;
+}
+
+.form-button {
+  cursor: pointer;
+  width: 129px;
+  height: 42px;
+  border: 1px solid #333B41;
+  border-radius: 5px;
+  background-color: #F1F3F2;
+  color: #000000;
+}
+.form-button:active, .form-button:hover {
+  border-color: #4B9200;
+  color: #4B9200;
+}
+
 .header {
   background-color: #000000;
 }
@@ -499,6 +655,14 @@ p,
   display: flex;
   flex-direction: row;
   justify-content: space-between;
+}
+
+.header__navigation .navigation__link:first-child > a {
+  color: #FE9013;
+}
+
+.footer__navigation .navigation__link:last-child > a {
+  color: #FE9013;
 }
 
 .payment__title {
@@ -607,6 +771,7 @@ p,
 
 .emergency-support-fund {
   border-bottom: 1px solid #FE9013;
+  color: #000000;
 }
 
 .feed-button {
