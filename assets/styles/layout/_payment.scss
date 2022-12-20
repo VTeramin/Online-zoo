@@ -1,0 +1,50 @@
+.payment__title {
+    width: max-content;
+    margin: 0px auto 40px;
+}
+
+.payment-cards {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+
+    width: 764px;
+    margin: 0px auto 60px;
+}
+
+.payment-card {
+    width: 168px;
+}
+
+.payment-card__icon {
+    width: 168px;
+    height: 168px;
+    display: inline-block;
+    @include gradient-border($gradient-orange, 5px);
+    &::after {
+        content: "";
+        display: inline-block;
+    }
+}
+
+.step-one::after {
+    @include image(url('../../assets/icons/pay.svg'), 168px, 168px);
+}
+
+.step-two::after {
+    @include image(url('../../assets/icons/zoo.svg'), 168px, 168px);
+}
+
+.step-three::after {
+    @include image(url('../../assets/icons/monkey.svg'), 168px, 168px);
+}
+
+.payment-arrow {
+    @include image(url('../../assets/icons/payment_arrow.svg'), 69px, 36px);
+    margin-top: calc((168px - 36px) / 2);
+    margin-bottom: auto;
+}
+
+.payment-card__step {
+    margin-top: 30px;
+}

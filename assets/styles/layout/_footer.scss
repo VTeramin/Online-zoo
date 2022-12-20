@@ -1,0 +1,103 @@
+.footer {
+    background-color: black;
+}
+
+.footer__wrapper {
+    padding-top: 40px;
+    padding-bottom: 50px;
+    display: grid;
+    grid-template-areas:
+    "logo subscribe subscribe"
+    "button  button button"
+    "socials  navigation designers";
+    grid-template-rows: 120px 98px 134px;
+    grid-template-columns: 1fr 1fr 1fr;
+}
+
+.footer-logo {
+    grid-area: logo;
+}
+
+.footer-socials {
+    grid-area: socials;
+
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+
+    .social {
+        display: flex;
+        gap: 12px;
+    }
+
+    .social__logo {
+        width: 26px;
+        height: 26px;
+        display: inline-block;
+
+        background-repeat: no-repeat;
+        background-position: center;
+        background-color: $color-social;
+        border-radius: 50%;
+    }
+
+    .facebook-logo  {
+        background-image: url("../icons/facebook.svg");
+        background-size: 8px 16px;
+    }
+
+    .twitter-logo  {
+        background-image: url("../icons/twitter.svg");
+        background-size: 16px 14px;
+    }
+
+    .instagram-logo  {
+        background-image: url("../icons/instagram.svg");
+        background-size: 16px 16px;
+    }
+
+    .youtube-logo  {
+        background-image: url("../icons/youtube.svg");
+        background-size: 18px 13px;
+    }
+    
+    .social__name {
+        display: inline-block;
+        color: $color-white;
+        margin-top: 4px;
+    }
+}
+
+.donate-button {
+    grid-area: button;
+}
+
+.footer__designer-info {
+    grid-area: designers;
+
+    margin: auto 0px 0px auto;
+    color: $color-white;
+}
+
+.footer__navigation {
+    grid-area: navigation;
+
+    width: 394px;
+    margin-top: auto;
+}
+
+.subscribe {
+    grid-area: subscribe;
+
+    margin-left: auto;
+}
+
+.subscribe__subtitle {
+    color: $color-white;
+    margin-bottom: 14px;
+}
+
+.email-input {
+    margin: 0px;
+    margin-right: 10px;
+}

@@ -1,0 +1,69 @@
+.animals-cards {
+    position: relative;
+}
+
+.animals-cards__wrapper {
+    padding-top: 180px;
+    padding-bottom: 100px;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.animal-cards__animals-scroll {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 20px;
+
+    position: relative;
+
+    margin-bottom: 80px;
+}
+
+.animal-card {
+    @include gradient-border($gradient-orange, 5px);
+
+    width: 366px;
+
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.animal-card__info {
+    margin: 8px 0  14px 16px;
+}
+
+.animal-card__type {
+    text-transform: uppercase;
+}
+
+.animal-card__type-icon {
+    margin: auto 14px 14px auto;
+}
+
+.type-vegeterian {
+    @include image(url('../../assets/icons/banana-bamboo_icon.png'), 33px, 37px);
+    display: inline-block;
+}
+
+.type-non-vegeterian {
+    @include image(url('../../assets/icons/meet-fish_icon.png'), 48px, 38px);
+    display: inline-block;
+}
+
+.button-left {
+    position: absolute;
+    top: calc(100% / 2 - 31px);
+    left: -82px;
+}
+
+.button-right {
+    position: absolute;
+    top: calc(100% / 2 - 31px);
+    right: -82px;
+}

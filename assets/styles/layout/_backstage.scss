@@ -1,0 +1,30 @@
+.backstage {
+    position: relative;
+}
+
+.backstage__wrapper {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+
+    padding-top: 140px;
+}
+
+.backstage__image {
+    width: 609px;
+    height: 403px;
+}
+
+.backstage__article {
+    width: 465px;
+    height: 403px;
+    display: grid;
+    grid-template-rows: 139px 96px 63px 105px;
+
+    color: $color-black-blue;
+}
+
+.backstage__title{
+    margin: 0;
+}

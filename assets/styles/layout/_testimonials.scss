@@ -1,0 +1,72 @@
+.testimonials {
+    position: relative;
+}
+
+.testimonials__wrapper {
+    padding-top: 140px;
+    padding-bottom: 172px;
+}
+
+.testimonials__title {
+    width: max-content;
+    margin: 0px auto 47px;
+}
+
+.testimonials-cards {
+    display: flex;
+    flex-direction: row;
+    gap: 30px;
+}
+
+.testimonials-card {
+    width: calc((100% - 30px * 3) / 4);
+    overflow: hidden;
+    @include gradient-border($gradient-pink, 20px, $color-gray-light, 2px);
+
+    padding: 15px 15px 19px;
+
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 10px;
+
+    * {
+        z-index: 1;
+    }
+}
+
+.person__image {
+    width: 37px;
+    height: 37px;
+    display: inline-block;
+}
+
+.testimonials-card__person-info {
+    width: 180px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 6px;
+
+    color: $color-gray-4;
+}
+
+.person__name {
+    width: 100%;
+    color: $color-black;
+}
+
+.testimonials-card__comment {
+    height: 308px;
+    overflow: hidden;
+    color: $color-gray;
+}
+
+.scroll-line {
+    margin: 21px auto 31px;
+}
+
+.feedback-button {
+    display: block;
+    margin: 0px auto;
+}

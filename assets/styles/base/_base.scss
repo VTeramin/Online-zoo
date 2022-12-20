@@ -1,0 +1,21 @@
+* {
+    box-sizing: border-box;
+}
+
+h1, h2, h3, p {
+    margin: 0;
+}
+
+ul {
+    padding: 0px;
+    margin: 0px;
+}
+
+li {
+    list-style-type: none;
+}
+
+a  {
+    color: $color-white;
+    text-decoration: none;
+}

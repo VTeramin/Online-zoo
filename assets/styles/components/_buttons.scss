@@ -1,0 +1,52 @@
+.button {
+    width: 298px;
+    height: 54px;
+    text-transform: uppercase;
+    color: $color-white;
+    border: 0px;
+    background: $gradient-orange;
+
+    &:hover {
+        background: $color-orange-dark;
+
+        cursor: pointer;
+    }
+    &:active {
+        background: $color-green;
+    }
+    &:disabled {
+        background: $color-gray-3;
+    }
+}
+
+.button-rounded {
+    border-radius: 25px;
+}
+
+.button-squared {
+    border-radius: 5px;
+}
+
+.arrow-button {
+    width: 62px;
+    height: 62px;
+    border-radius: 50%;
+}
+
+.arrow-left {
+    @include image(url("../icons/vector_arrow-right.svg"), 18px, 9px);
+    display: inline-block;
+    content: "";
+
+    margin: auto;
+
+    transform: rotate(180deg);
+}
+
+.arrow-right {
+    @include image(url("../icons/vector_arrow-right.svg"), 18px, 9px);
+    display: inline-block;
+    content: "";
+
+    margin: auto;
+}

@@ -1,0 +1,22 @@
+@mixin font ($weight, $size, $height) {
+    font-weight: $weight;
+    font-size: $size;
+    line-height: $height;
+}
+
+@mixin image ($url, $width, $height, $position: center) {
+    background-image: $url;
+    width: $width;
+    height: $height;
+    background-position: $position;
+    background-repeat: no-repeat;
+}
+
+@mixin gradient-border ($gradient, $radius, $background: $color-white, $border: 1px) {
+    border: $border solid transparent;
+    border-radius: $radius;
+    background-image: linear-gradient($background, $background), $gradient;
+    background-origin: border-box;
+    background-clip: padding-box, border-box;
+    overflow: hidden;
+}

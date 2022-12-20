@@ -1,0 +1,36 @@
+.backstage__wrapper::after {
+    @include image(url("../images/flower_foto.png"), 202px, 605px);
+    content: "";
+
+    position: absolute;
+    right: 0px;
+    top: 12px;
+}
+
+.animals-cards__wrapper::after {
+    @include image(url("../images/palm_foto.png"), 292px, 460px);
+    content: "";
+
+    position: absolute;
+    left: 0px;
+    bottom: 0px;
+}
+
+.animals-cards__wrapper::before {
+    @include image(url("../images/strelitzia.png"), 368px, 275px);
+    content: "";
+
+    position: absolute;
+    right: 0px;
+    bottom: 0px;
+}
+
+.testimonials__wrapper::after {
+    @include image(url("../images/leav_foto.png"), 247px, 408px);
+    content: "";
+
+    position: absolute;
+    z-index: -1;
+    right: 0px;
+    bottom: -141px;
+}

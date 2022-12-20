@@ -1,0 +1,19 @@
+.logo {
+    display: inline-block;
+    width: 82px;
+    height: 52px;
+    border: 1.18841px solid $color-white;
+
+    text-align: center;
+    
+    position: relative;
+}
+
+.bamboo {
+    @include image(url('../../assets/icons/bamboo.svg'), 12px, 21px);
+    display: inline-block;
+
+    position: absolute;
+    top: 20px;
+    left: 10px;
+}

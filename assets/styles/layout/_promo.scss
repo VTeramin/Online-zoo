@@ -1,0 +1,41 @@
+.promo__wrapper {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+.promo {
+    @include image(url("../images/GiantPanda.jpg"), auto, auto);
+    background-size: cover;
+}
+
+.promo__content {
+    grid-column: 2;
+    padding-left: 73px;
+    @include image(url("../images/ellipse.png"), auto, auto, 0px 12px);
+
+    height: 700px;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.promo__title {
+    margin-top: 86px;
+    margin-bottom: 60px;
+    display: inline-block;
+    width: 500px;
+    height: 400px;
+
+    text-align: center;
+    color: $color-white;
+    text-transform: uppercase;
+}
+
+.favorite {
+    color: $color-yellow;
+}
+
+.donate-promo {
+    height: 390px;
+}

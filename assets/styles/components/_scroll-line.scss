@@ -1,0 +1,15 @@
+.scroll-line {
+    width: 599px;
+    height: 8px;
+    @include gradient-border($gradient-pink, 20px, $color-gray-light, 2px);
+    background-color: $color-scroll-line;
+    border-radius: 5px;
+}
+
+.scroll-line__slider {
+    width: 115px;
+    height: 100%;
+    background: $color-orange;
+    border-radius: 5px;
+    margin: auto 0px;
+}
