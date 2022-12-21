@@ -19,6 +19,11 @@
         padding-top: 80px;
         padding-bottom: 100px;
     }
+
+    @include mobile {
+        padding-top: 40px;
+        padding-bottom: 60px;
+    }
 }
 
 .animal-cards__animals-scroll {
@@ -38,11 +43,23 @@
     @include tablet {
         margin-bottom: 60px;
     }
+
+    @include mobile {
+        row-gap: 20px;
+        margin-bottom: 20px;
+    }
+}
+
+.arrow-button {
+    position: absolute;
+    top: calc(100% / 2 - 31px);
+
+    @include mobile {
+        display: none;
+    }
 }
 
 .button-left {
-    position: absolute;
-    top: calc(100% / 2 - 31px);
     left: -81px;
 
     @include small-desktop {
@@ -55,8 +72,6 @@
 }
 
 .button-right {
-    position: absolute;
-    top: calc(100% / 2 - 31px);
     right: -81px;
 
     @include small-desktop {

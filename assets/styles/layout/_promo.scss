@@ -9,6 +9,7 @@
     @include tablet {
         grid-template-columns: 50% 50%;
         position: relative;
+        padding-top: 34px
     }
 }
 
@@ -38,10 +39,17 @@
     }
 
     @include tablet {
-        height: 339px;
+        height: 373px;
         padding-left: 37px;
         background-size: 238px;
         background-position: 0px 10px;
+    }
+
+    @include mobile {
+        height: 221px;
+        padding-left: 19px;
+        background-size: 119px;
+        background-position: 0px 22px;
     }
 }
 
@@ -69,17 +77,29 @@
         height: 204px;
         margin: 48px 0px 86px auto;
     }
+
+    @include mobile {
+        font-size: 2.8rem;
+        width: 128px;
+        height: 102px;
+        margin: 41px 0px 43px auto;
+    }
 }
 
 .favorite {
     color: $color-yellow;
 }
 
-@include tablet {
-    .promo__button {
+.promo__button {
+    @include tablet {
         position: absolute;
         left: 0px;
         bottom: 40px;
     }
+    
+    @include mobile {
+        bottom: -74px;
+    }
 }
+
 

@@ -55,15 +55,20 @@
 }
 
 .animal-card__image {
+    @include image(url("../images/panda.jpg"), auto, auto);
+    background-size: cover;
     width: 366px;
     height: 366px;
-    @include image(url("../images/panda.jpg"), 366px, 366px);
     content: "";
 
     @include small-desktop {
         width: 294px;
         height: 294px;
-        background-size: 294px;
+    }
+
+    @include tablet {
+        width: 285px;
+        height: 285px;
     }
 }
 

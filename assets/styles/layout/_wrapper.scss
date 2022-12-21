@@ -9,4 +9,8 @@
     @include tablet {
         max-width: 600px;
     }
+
+    @include mobile {
+        max-width: 300px;
+    }
 }

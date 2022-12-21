@@ -15,6 +15,11 @@
         padding-top: 60px;
         padding-bottom: 80px;
     }
+
+    @include mobile {
+        padding-top: 30px;
+        padding-bottom: 60px;
+    }
 }
 
 .testimonials__title {
@@ -23,6 +28,11 @@
 
     @include small-desktop {
         margin-bottom: 30px;
+    }
+
+    @include mobile {
+        font-size: 2.4rem;
+        margin-bottom: 20px;
     }
 }
 
@@ -35,6 +45,10 @@
         flex-direction: column;
         gap: 15px;
         margin-bottom: 40px;
+    }
+
+    @include mobile {
+        margin-bottom: 30px;
     }
 }
 
@@ -117,4 +131,8 @@
 .feedback-button {
     display: block;
     margin: 0px auto;
+
+    @include mobile {
+        width: 240px;
+    }
 }

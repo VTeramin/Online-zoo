@@ -29,6 +29,6 @@
     @media (max-width: $small-desktop-width) { @content; }
 }
   
-@mixin mmobile {
+@mixin mobile {
     @media (max-width: $tablet-width) { @content; }
 }

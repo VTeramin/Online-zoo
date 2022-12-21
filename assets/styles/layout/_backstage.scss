@@ -18,6 +18,10 @@
     @include tablet {
         padding-top: 60px;
     }
+
+    @include mobile {
+        padding-top: 104px;
+    }
 }
 
 .backstage__image {
@@ -52,8 +56,18 @@
         height: 367px;
         grid-template-rows: 136px 72px 49px 110px;
     }
+
+    @include mobile {
+        width: 495px;
+        height: 367px;
+        grid-template-rows: 68px 83px 39px 198px;
+    }
 }
 
 .backstage__title{
     margin: 0;
+
+    @include mobile {
+        font-size: 2.4rem;
+    }
 }
