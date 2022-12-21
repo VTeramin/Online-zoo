@@ -9,11 +9,21 @@
     align-items: center;
 
     padding-top: 140px;
+
+    @include small-desktop {
+        padding-top: 109px;
+    }
 }
 
 .backstage__image {
     width: 609px;
     height: 403px;
+    @include image(url("../images/bamboo-cap.jpg"), 609px, 403px);
+
+    @include small-desktop {
+        width: 455px;
+        height: 408px;
+    }
 }
 
 .backstage__article {

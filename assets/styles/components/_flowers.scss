@@ -5,32 +5,61 @@
     position: absolute;
     right: 0px;
     top: 12px;
+
+    @include small-desktop {
+        display: none;
+    }
 }
 
-.animals-cards__wrapper::after {
-    @include image(url("../images/palm_foto.png"), 292px, 460px);
+.animals-cards::after {
+    @include image(url("../images/palm_foto.png"), auto, auto);
+    background-size: cover;
+    width: 292px;
+    height: 460px;
     content: "";
 
     position: absolute;
     left: 0px;
     bottom: 0px;
+
+    @include small-desktop {
+        width: 194px;
+        height: 302px;
+    }
 }
 
-.animals-cards__wrapper::before {
-    @include image(url("../images/strelitzia.png"), 368px, 275px);
+.animals-cards::before {
+    @include image(url("../images/strelitzia.png"), auto, auto);
+    background-size: cover;
+    width: 368px;
+    height: 275px;
     content: "";
 
     position: absolute;
     right: 0px;
     bottom: 0px;
+
+    @include small-desktop {
+        width: 241px;
+        height: 180px;
+    }
 }
 
 .testimonials__wrapper::after {
-    @include image(url("../images/leav_foto.png"), 247px, 408px);
+    @include image(url("../images/leav_foto.png"), auto, auto);
+    background-size: cover;
+    width: 247px;
+    height: 408px;
     content: "";
 
     position: absolute;
     z-index: -1;
     right: 0px;
     bottom: -141px;
+
+    @include small-desktop {
+        bottom: -95px;
+        width: 200px;
+        height: 330px;
+    }
 }

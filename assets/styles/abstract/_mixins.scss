@@ -20,3 +20,15 @@
     background-clip: padding-box, border-box;
     overflow: hidden;
 }
+
+@mixin small-desktop {
+    @media (max-width: $desktop-width) { @content; }
+}
+
+@mixin media-tablet {
+    @media (max-width: $small-desktop-width) { @content; }
+}
+  
+@mixin media-mobile {
+    @media (max-width: $tablet-width) { @content; }
+}

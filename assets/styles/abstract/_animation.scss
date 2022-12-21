@@ -1,0 +1,18 @@
+@keyframes show-pop-info {
+    from {
+        transform: translateY(300%);
+    }
+    to {
+        transform: translateY(200%);
+    }
+}
+
+@keyframes image-animation {
+    from {
+        background-size: 100%;
+    }
+    to {
+        background-size: 110%;
+        filter: brightness(50%);
+    }
+}

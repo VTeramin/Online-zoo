@@ -1,3 +1,4 @@
+@import "./abstract/animation";
 @import "./abstract/constants";
 @import "./abstract/mixins";
 
@@ -9,6 +10,7 @@
 @import "./components/logo";
 @import "./components/scroll-line";
 
+@import "./layout/animal-card";
 @import "./layout/animal-cards";
 @import "./layout/backstage";
 @import "./layout/footer";

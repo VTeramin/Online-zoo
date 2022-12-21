@@ -1,6 +1,10 @@
 .promo__wrapper {
     display: grid;
     grid-template-columns: 1fr 1fr;
+
+    @include small-desktop {
+        grid-template-columns: 45% 55%;
+    }
 }
 
 .promo {
@@ -11,18 +15,27 @@
 .promo__content {
     grid-column: 2;
     padding-left: 73px;
-    @include image(url("../images/ellipse.png"), auto, auto, 0px 12px);
+    @include image(url("../images/ellipse.png"), 465px, 465px, 0px 12px);
 
     height: 700px;
+    width: max-content;
 
     display: flex;
     flex-direction: column;
     align-items: center;
+    overflow: visible;
+
+    @include small-desktop {
+        height: 504px;
+        padding-left: 59px;
+        background-size: 367px;
+        background-position: 0px -11px;
+    }
 }
 
 .promo__title {
-    margin-top: 86px;
-    margin-bottom: 60px;
+    margin: 86px 0px 60px auto;
+    padding: 0px;
     display: inline-block;
     width: 500px;
     height: 400px;
@@ -30,12 +43,15 @@
     text-align: center;
     color: $color-white;
     text-transform: uppercase;
+
+    @include small-desktop {
+        font-size: 8.5rem;
+        width: 400px;
+        height: 320px;
+        margin: 43px 0px 40px auto;
+    }
 }
 
 .favorite {
     color: $color-yellow;
-}
-
-.donate-promo {
-    height: 390px;
 }

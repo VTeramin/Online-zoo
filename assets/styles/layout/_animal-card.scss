@@ -1,0 +1,109 @@
+.animal-card {
+    @include gradient-border($gradient-orange, 5px);
+
+    width: 366px;
+
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+
+    position: relative;
+
+    @include small-desktop {
+        width: 294px;
+    }
+
+    .pop-info {
+        display: none;
+        color: $color-orange;
+        padding: 10px;
+
+        position: absolute;
+        right: 10px;
+
+        border: 2px solid $color-orange;
+        border-radius: 10px;
+
+        & > * {
+            margin-left: auto;
+        }
+    }
+
+    &:hover {
+        cursor: pointer;
+        background: $gradient-orange;
+
+        & > .animal-card__image {
+            animation-name: image-animation;
+            animation-duration: 1s;
+            background-size: 110%;
+            filter: brightness(50%);
+        }
+
+        .pop-info {
+            display: inline-block;
+            animation-name: show-pop-info;
+            animation-duration: 1s;
+            transform: translateY(200%);
+        }
+    }
+}
+
+.animal-card__image {
+    width: 366px;
+    height: 366px;
+    @include image(url("../images/panda.jpg"), 366px, 366px);
+    content: "";
+
+    @include small-desktop {
+        width: 294px;
+        height: 294px;
+        background-size: 294px;
+    }
+}
+
+.animal-card:nth-child(1) > .animal-card__image  {
+    background-image: url("../images/panda.jpg");
+}
+
+.animal-card:nth-child(2) > .animal-card__image  {
+    background-image: url("../images/eagle.jpg");
+}
+
+.animal-card:nth-child(3) > .animal-card__image  {
+    background-image: url("../images/gorilla.jpg");
+}
+
+.animal-card:nth-child(4) > .animal-card__image  {
+    background-image: url("../images/sloth.jpg");
+}
+
+.animal-card:nth-child(5) > .animal-card__image  {
+    background-image: url("../images/cheetahs.jpg");
+}
+
+.animal-card:nth-child(6) > .animal-card__image  {
+    background-image: url("../images/penguins.jpg");
+}
+
+.animal-card__info {
+    margin: 8px 0  14px 16px;
+}
+
+.animal-card__type {
+    text-transform: uppercase;
+}
+
+.animal-card__type-icon {
+    margin: auto 14px 14px auto;
+    display: inline-block;
+}
+
+.type-vegeterian {
+    @include image(url('../../assets/icons/banana-bamboo_icon.png'), 33px, 37px);
+}
+
+.type-non-vegeterian {
+    @include image(url('../../assets/icons/meet-fish_icon.png'), 48px, 38px);
+}

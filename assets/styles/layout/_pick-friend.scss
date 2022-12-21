@@ -3,6 +3,11 @@
     opacity: 0.9;
     padding-top: 69px;
     padding-bottom: 100px;
+
+    @include small-desktop {
+        padding-top: 30px;
+        padding-bottom: 50px;
+    }
 }
 
 .pick-friend__wrapper {
@@ -11,6 +16,10 @@
     border-radius: 20px;
 
     padding: 41px 99px 59px;
+
+    @include small-desktop {
+        padding: 30px 49px 50px 40px;
+    }
 }
 
 .pick-friend__title {
