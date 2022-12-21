@@ -11,7 +11,13 @@
     align-items: center;
 
     @include small-desktop {
-        row-gap: 92px;
+        padding-top: 142px;
+        padding-bottom: 140px;
+    }
+
+    @include tablet {
+        padding-top: 80px;
+        padding-bottom: 100px;
     }
 }
 
@@ -28,14 +34,23 @@
     @include small-desktop {
         row-gap: 92px;
     }
+
+    @include tablet {
+        margin-bottom: 60px;
+    }
 }
 
 .button-left {
     position: absolute;
     top: calc(100% / 2 - 31px);
     left: -81px;
+
     @include small-desktop {
         left: 323px;
+    }
+
+    @include tablet {
+        left: 223px;
     }
 }
 
@@ -43,8 +58,13 @@
     position: absolute;
     top: calc(100% / 2 - 31px);
     right: -81px;
+
     @include small-desktop {
         right: 323px;
+    }
+
+    @include tablet {
+        right: 223px;
     }
 }
 

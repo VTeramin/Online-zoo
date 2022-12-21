@@ -10,6 +10,11 @@
         padding-top: 100px;
         padding-bottom: 140px;
     }
+
+    @include tablet {
+        padding-top: 60px;
+        padding-bottom: 80px;
+    }
 }
 
 .testimonials__title {
@@ -25,10 +30,16 @@
     display: flex;
     flex-direction: row;
     justify-content: space-between;
+
+    @include tablet {
+        flex-direction: column;
+        gap: 15px;
+        margin-bottom: 40px;
+    }
 }
 
 .testimonials-card {
-    width: calc((100% - 30px * 3) / 4);
+    width: 268px;
     height: 391px;
     overflow: hidden;
     @include gradient-border($gradient-pink, 20px, $color-gray-light, 2px);
@@ -51,7 +62,12 @@
     }
 
     @include small-desktop {
-        width: calc((100% - 30px * 2) / 3);
+        width: 293px;
+    }
+
+    @include tablet {
+        width: 100%;
+        height: 109px;
     }
 }
 
@@ -84,10 +100,18 @@
     @include small-desktop {
         height: 290px;
     }
+
+    @include tablet {
+        height: 35px;
+    }
 }
 
 .scroll-line {
     margin: 21px auto 31px;
+
+    @include tablet {
+        display: none;
+    }
 }
 
 .feedback-button {

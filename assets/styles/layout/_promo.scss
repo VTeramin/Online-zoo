@@ -1,9 +1,14 @@
 .promo__wrapper {
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 50% 50%;
 
     @include small-desktop {
         grid-template-columns: 45% 55%;
+    }
+
+    @include tablet {
+        grid-template-columns: 50% 50%;
+        position: relative;
     }
 }
 
@@ -31,6 +36,13 @@
         background-size: 367px;
         background-position: 0px -11px;
     }
+
+    @include tablet {
+        height: 339px;
+        padding-left: 37px;
+        background-size: 238px;
+        background-position: 0px 10px;
+    }
 }
 
 .promo__title {
@@ -50,8 +62,24 @@
         height: 320px;
         margin: 43px 0px 40px auto;
     }
+
+    @include tablet {
+        font-size: 5.4rem;
+        width: 256px;
+        height: 204px;
+        margin: 48px 0px 86px auto;
+    }
 }
 
 .favorite {
     color: $color-yellow;
 }
+
+@include tablet {
+    .promo__button {
+        position: absolute;
+        left: 0px;
+        bottom: 40px;
+    }
+}
+

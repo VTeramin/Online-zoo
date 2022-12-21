@@ -5,4 +5,8 @@
     @include small-desktop {
         max-width: 940px;
     }
+
+    @include tablet {
+        max-width: 600px;
+    }
 }

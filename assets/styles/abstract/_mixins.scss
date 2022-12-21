@@ -25,10 +25,10 @@
     @media (max-width: $desktop-width) { @content; }
 }
 
-@mixin media-tablet {
+@mixin tablet {
     @media (max-width: $small-desktop-width) { @content; }
 }
   
-@mixin media-mobile {
+@mixin mmobile {
     @media (max-width: $tablet-width) { @content; }
 }

@@ -1,6 +1,10 @@
 .payment__title {
     width: max-content;
     margin: 0px auto 40px;
+
+    @include tablet {
+        margin-bottom: 20px;
+    }
 }
 
 .payment-cards {
@@ -10,6 +14,13 @@
 
     width: 764px;
     margin: 0px auto 60px;
+
+    position: relative;
+
+    @include tablet {
+        width: 600px;
+        margin-bottom: 40px;
+    }
 }
 
 .payment-card {
@@ -43,6 +54,28 @@
     @include image(url('../../assets/icons/payment_arrow.svg'), 69px, 36px);
     margin-top: calc((168px - 36px) / 2);
     margin-bottom: auto;
+
+    @include tablet {
+        @include image(url('../../assets/icons/payment_arrow_tablet.svg'), auto, auto);
+        width: 90px;
+        height: 28px;
+        background-size: cover;
+        position: absolute;
+        top: -16px;
+        margin: 0px;
+    }
+}
+
+@include tablet {
+    .payment-cards > *:nth-child(2) {
+        left: 145px;
+    }
+}
+
+@include tablet {
+    .payment-cards > *:nth-child(4) {
+        right: 145px;
+    }
 }
 
 .payment-card__step {

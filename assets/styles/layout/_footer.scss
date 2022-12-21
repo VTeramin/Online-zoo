@@ -12,6 +12,17 @@
     "socials  navigation designers";
     grid-template-rows: 120px 98px 134px;
     grid-template-columns: 1fr 1fr minmax(316px, 1fr);
+
+    @include tablet {
+        padding-top: 12px;
+        padding-bottom: 12px;
+        grid-template-areas:
+        "logo socials"
+        "button  socials"
+        "navigation designers";
+        grid-template-rows: 84px 1fr 94px;
+        grid-template-columns: 300px 1fr;
+    }
 }
 
 .footer-logo {
@@ -24,6 +35,11 @@
     display: flex;
     flex-direction: column;
     gap: 10px;
+
+    @include tablet {
+        margin-left: auto;
+        gap: 20px;
+    }
 
     .social {
         display: flex;
@@ -84,6 +100,10 @@
         display: inline-block;
         color: $color-white;
         margin-top: 4px;
+
+        @include tablet {
+            display: none;
+        }
     }
 }
 
@@ -114,12 +134,20 @@
 
     width: 394px;
     margin-top: auto;
+
+    @include tablet {
+        width: 300px;
+    }
 }
 
 .subscribe {
     grid-area: subscribe;
 
     margin-left: auto;
+
+    @include tablet {
+        display: none;
+    }
 }
 
 .subscribe__subtitle {

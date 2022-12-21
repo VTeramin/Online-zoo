@@ -2,15 +2,45 @@
     display: inline-block;
     width: 82px;
     height: 52px;
-    border: 1.18841px solid $color-white;
+    border: 1px solid $color-white;
 
     text-align: center;
     
     position: relative;
+
+    &:hover,
+    &:active {
+        border: 1px solid $color-orange;
+
+        .bamboo {
+            background-image: url("../icons/bamboo_hover.svg");
+        }
+    }
+}
+
+.header__logo {
+    @include tablet {
+        width: 47px;
+        height: 29px;
+        font-size: 1.2rem;
+        border: none;
+    }
+
+    .bamboo {
+        @include tablet {
+            width: 8px;
+            height: 13px;
+            top: 13px;
+            left: 4px;
+        }
+    }
 }
 
 .bamboo {
-    @include image(url('../../assets/icons/bamboo.svg'), 12px, 21px);
+    @include image(url('../../assets/icons/bamboo.svg'), auto, auto);
+    background-size: contain;
+    width: 12px;
+    height: 21px;
     display: inline-block;
 
     position: absolute;

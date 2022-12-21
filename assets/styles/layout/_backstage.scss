@@ -9,9 +9,14 @@
     align-items: center;
 
     padding-top: 140px;
+    overflow: visible;
 
     @include small-desktop {
         padding-top: 109px;
+    }
+
+    @include tablet {
+        padding-top: 60px;
     }
 }
 
@@ -24,6 +29,10 @@
         width: 455px;
         height: 408px;
     }
+
+    @include tablet {
+        display: none;
+    }
 }
 
 .backstage__article {
@@ -33,6 +42,16 @@
     grid-template-rows: 139px 96px 63px 105px;
 
     color: $color-black-blue;
+
+    @include small-desktop {
+        grid-template-rows: 136px 96px 63px 108px;
+    }
+
+    @include tablet {
+        width: 495px;
+        height: 367px;
+        grid-template-rows: 136px 72px 49px 110px;
+    }
 }
 
 .backstage__title{
