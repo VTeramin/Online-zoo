@@ -1533,6 +1533,38 @@ p,
   display: inline-block;
 }
 
+.testimonials-card:nth-child(1) .person__image {
+  background-image: url("../icons/user_icon.svg");
+  width: 37px;
+  height: 37px;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.testimonials-card:nth-child(2) .person__image {
+  background-image: url("../images/oscar.png");
+  width: 37px;
+  height: 37px;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.testimonials-card:nth-child(3) .person__image {
+  background-image: url("../images/frederica.png");
+  width: 37px;
+  height: 37px;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.testimonials-card:nth-child(4) .person__image {
+  background-image: url("../images/mila.png");
+  width: 37px;
+  height: 37px;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
 .testimonials-card__person-info {
   width: 180px;
   display: flex;

@@ -91,6 +91,22 @@
     display: inline-block;
 }
 
+.testimonials-card:nth-child(1) .person__image {
+    @include image(url("../icons/user_icon.svg"), 37px, 37px);
+}
+
+.testimonials-card:nth-child(2) .person__image {
+    @include image(url("../images/oscar.png"), 37px, 37px);
+}
+
+.testimonials-card:nth-child(3) .person__image {
+    @include image(url("../images/frederica.png"), 37px, 37px);
+}
+
+.testimonials-card:nth-child(4) .person__image {
+    @include image(url("../images/mila.png"), 37px, 37px);
+}
+
 .testimonials-card__person-info {
     width: 180px;
     display: flex;
