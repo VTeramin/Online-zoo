@@ -48,5 +48,11 @@
         width: 18px;
         height: 10px;
         content: "";
+
+        &:hover,
+        &:active {
+            cursor: pointer;
+            background-image: url("../icons/burger_menu_hover.svg");
+        }
     }
 }
