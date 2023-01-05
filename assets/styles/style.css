@@ -547,6 +547,7 @@ p,
   background-clip: padding-box, border-box;
   overflow: hidden;
   width: 366px;
+  height: 426px;
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
@@ -555,12 +556,14 @@ p,
 }
 @media (max-width: 1600px) {
   .animal-card {
-    width: 294px;
+    width: 293px;
+    height: 354px;
   }
 }
 @media (max-width: 1000px) {
   .animal-card {
     width: 285px;
+    height: 332px;
   }
 }
 .animal-card .pop-info {
@@ -691,52 +694,59 @@ p,
 }
 
 .animals-cards__wrapper {
-  padding-top: 180px;
   padding-bottom: 100px;
   display: flex;
   flex-direction: column;
   align-items: center;
+  position: relative;
 }
 @media (max-width: 1600px) {
   .animals-cards__wrapper {
-    padding-top: 142px;
     padding-bottom: 140px;
   }
 }
 @media (max-width: 1000px) {
   .animals-cards__wrapper {
-    padding-top: 80px;
     padding-bottom: 100px;
   }
 }
 @media (max-width: 640px) {
   .animals-cards__wrapper {
-    padding-top: 40px;
     padding-bottom: 60px;
   }
 }
 
+.overflow {
+  overflow: hidden;
+}
+
 .animal-cards__animals-scroll {
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   flex-wrap: wrap;
   justify-content: space-between;
-  row-gap: 20px;
-  position: relative;
+  column-gap: 30px;
   margin-bottom: 80px;
+  width: 1158px;
+  height: 872px;
 }
 @media (max-width: 1600px) {
   .animal-cards__animals-scroll {
-    row-gap: 92px;
+    width: 940px;
+    height: 801px;
   }
 }
 @media (max-width: 1000px) {
   .animal-cards__animals-scroll {
+    width: 600px;
+    height: 756px;
     margin-bottom: 60px;
   }
 }
 @media (max-width: 640px) {
   .animal-cards__animals-scroll {
+    width: 285px;
+    height: 1388px;
     row-gap: 20px;
     margin-bottom: 20px;
   }
@@ -744,7 +754,17 @@ p,
 
 .arrow-button {
   position: absolute;
-  top: calc(50% - 31px);
+  top: 405px;
+}
+@media (max-width: 1600px) {
+  .arrow-button {
+    top: 369px;
+  }
+}
+@media (max-width: 1000px) {
+  .arrow-button {
+    top: 347px;
+  }
 }
 @media (max-width: 640px) {
   .arrow-button {
@@ -790,21 +810,25 @@ p,
   justify-content: space-between;
   align-items: center;
   padding-top: 140px;
+  padding-bottom: 180px;
   overflow: visible;
 }
 @media (max-width: 1600px) {
   .backstage__wrapper {
     padding-top: 109px;
+    padding-bottom: 142px;
   }
 }
 @media (max-width: 1000px) {
   .backstage__wrapper {
     padding-top: 60px;
+    padding-bottom: 80px;
   }
 }
 @media (max-width: 640px) {
   .backstage__wrapper {
     padding-top: 104px;
+    padding-bottom: 40px;
   }
 }
 

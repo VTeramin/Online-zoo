@@ -2,6 +2,7 @@
     @include gradient-border($gradient-orange, 5px);
 
     width: 366px;
+    height: 426px;
 
     display: flex;
     flex-direction: row;
@@ -11,11 +12,13 @@
     position: relative;
 
     @include small-desktop {
-        width: 294px;
+        width: 293px;
+        height: 354px;
     }
 
     @include tablet {
         width: 285px;
+        height: 332px;
     }
 
     .pop-info {

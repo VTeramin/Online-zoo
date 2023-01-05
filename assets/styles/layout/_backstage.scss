@@ -9,18 +9,22 @@
     align-items: center;
 
     padding-top: 140px;
+    padding-bottom: 180px;
     overflow: visible;
 
     @include small-desktop {
         padding-top: 109px;
+        padding-bottom: 142px;
     }
 
     @include tablet {
         padding-top: 60px;
+        padding-bottom: 80px;
     }
 
     @include mobile {
         padding-top: 104px;
+        padding-bottom: 40px;
     }
 }
 

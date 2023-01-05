@@ -52,3 +52,146 @@ function closeMenu() {
     const html = document.querySelector('html');
     html.style.overflow = 'visible';
 }
+
+// Pets Carousel
+
+const animals = [
+    {
+        img: "../../assets/images/panda.jpg",
+        name: "Giant Pandas",
+        location: "Native to Southwest China",
+        type: "vegeterian"
+    },
+    {
+        img: "../../assets/images/eagle.jpg",
+        name: "Eagles",
+        location: "Native to South America",
+        type: "non-vegeterian"
+    },
+    {
+        img: "../../assets/images/gorilla.jpg",
+        name: "Gorillas",
+        location: "Native to Congo",
+        type: "vegeterian"
+    },
+    {
+        img: "../../assets/images/sloth.jpg",
+        name: "Two-toed Sloth",
+        location: "Mesoamerica, South America",
+        type: "vegeterian"
+    },
+    {
+        img: "../../assets/images/cheetahs.jpg",
+        name: "Cheetahs",
+        location: "Native to Africa",
+        type: "non-vegeterian"
+    },
+    {
+        img: "../../assets/images/penguins.jpg",
+        name: "Penguins",
+        location: "Native to Antarctica",
+        type: "non-vegeterian"
+    }
+]
+
+shuffle(animals);
+
+function shuffle(array) {
+    array.sort(() => Math.random() - 0.5);
+}
+
+const arrAnimalCards = document.querySelectorAll(".animal-card");
+arrAnimalCards.forEach((animalCard, index) => replaceAnimals(animalCard, index))
+
+function replaceAnimals(animalCard, index) {
+    const animalsReplace = [...animals];
+    const animal = animalsReplace[index];
+
+    const img = animalCard.querySelector(".animal-card__image");
+    img.style.backgroundImage = `url(${animal.img})`;
+    
+    const name = animalCard.querySelector(".animal-card__type");
+    name.textContent = animal.name;
+
+    const location = animalCard.querySelector(".animal-card__origin");
+    location.textContent = animal.location;
+
+    const type = animalCard.querySelector(".animal-card__type-icon");
+    type.classList = `animal-card__type-icon type-${animal.type}`
+
+    const popName = animalCard.querySelector(".pop-info__name");
+    popName.textContent = animal.name;
+
+    const popLocation = animalCard.querySelector(".pop-info__location");
+    popLocation.textContent = animal.location;
+}
+
+const buttonLeft = document.querySelector(".button-left");
+buttonLeft.addEventListener("click", leftScroll);
+
+function leftScroll() {
+    const nextAnimals = createNewAnimals();
+
+    const animalScroll = document.querySelector(".animal-cards__animals-scroll");
+    animalScroll.append(...nextAnimals);
+    animalScroll.style.transform = "translateX(calc(-100% - 30px)";
+    animalScroll.style.transition = "1s";
+
+    blockArrowButtons();
+
+    setTimeout(() => {
+        animalScroll.style.transform = "translateX(0px)";
+        animalScroll.style.transition = "0s";
+
+        const newArrAnimalCards = document.querySelectorAll(".animal-card");
+        newArrAnimalCards.forEach((animalCard, index) => index < 6 ? animalCard.remove(): animalCard);
+
+        deBlockArrowButtons()
+    }, 1000);
+}
+
+const buttonRight = document.querySelector(".button-right");
+buttonRight.addEventListener("click", rightScroll);
+
+function rightScroll() {
+    const nextAnimals = createNewAnimals();
+
+    const animalScroll = document.querySelector(".animal-cards__animals-scroll");
+    animalScroll.prepend(...nextAnimals);
+    animalScroll.style.transform = "translateX(calc(-100% - 30px)";
+    animalScroll.style.transition = "0s";
+
+    blockArrowButtons();
+
+    setTimeout(() => {
+        animalScroll.style.transform = "translateX(0px)";
+        animalScroll.style.transition = "1s";
+    }, 1);
+
+    setTimeout(() => {
+        const newArrAnimalCards = document.querySelectorAll(".animal-card");
+        newArrAnimalCards.forEach((animalCard, index) => index >= 6 ? animalCard.remove(): animalCard);
+
+        deBlockArrowButtons()
+    }, 1000);
+}
+
+function createNewAnimals() {
+    const nextAnimals = [];
+    arrAnimalCards.forEach(animalCard => nextAnimals.push(animalCard.cloneNode(true)));
+    
+    shuffle(animals);
+    nextAnimals.forEach((animalCard, index) => replaceAnimals(animalCard, index));
+
+    return nextAnimals;
+}
+
+function blockArrowButtons() {
+    buttonLeft.removeEventListener("click", leftScroll);
+    buttonRight.removeEventListener("click", rightScroll);
+}
+
+function deBlockArrowButtons() {
+    buttonLeft.addEventListener("click", leftScroll);
+    buttonRight.addEventListener("click", rightScroll);
+}
