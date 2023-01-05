@@ -38,8 +38,10 @@
 
 .testimonials-cards {
     display: flex;
-    flex-direction: row;
-    justify-content: space-between;
+    flex-direction: column;
+    flex-wrap: wrap;
+    column-gap: 29px;
+    height: 391px;
 
     @include tablet {
         flex-direction: column;

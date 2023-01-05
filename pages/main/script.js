@@ -26,8 +26,7 @@ function createMenu() {
             <a href="https://www.figma.com/file/jfEFwkXVj1WRq7sUHDr8os/PetStory-online" class="open-menu__designer">Designed by ©</a>
             <span class="open-menu__close"></span>
     </div>
-    <div class="shadow"></div>
-`;
+    <div class="shadow"></div>`;
     document.body.append(menu);
 
     const html = document.querySelector('html');
@@ -194,4 +193,75 @@ function blockArrowButtons() {
 function deBlockArrowButtons() {
     buttonLeft.addEventListener("click", leftScroll);
     buttonRight.addEventListener("click", rightScroll);
+}
+
+// Testimonials slider
+
+const comments = [
+    {
+        name: "Michael John",
+        img: "../../assets/icons/user_icon.svg",
+        location: "Local Austria",
+        time: "Today",
+        comment: "The best online zoo I&apos;ve met. My son delighted very much ljves to watch gouillas. Online zoo is one jf the ways to instill a love for animals.The best online zoo I&apos;ve met. My son delighted very much ljves to watch gouillas. Online zoo is one jf the ways to instill a love for animals.<br>The best online zoo I&apos;ve met. My son delighted very much ljves to watch gouillas. Online zoo is one jf the ways to instill a love for animals.The best online zoo I&apos;ve met. My son delighted very much ljves to watch gouillas. Online zoo is one jf the ways to instill a love for animals."
+    },
+    {
+        name: "Oskar Samborsky",
+        img: "../../assets/images/oscar.png",
+        location: "Local Austria",
+        time: "Yesterday",
+        comment: "Online zoo is one jf the ways to instill a love for animals.The best online zoo I&apos;ve met. My son delighted very much ljves to watch gouillas. Online zoo is one jf the ways to instill a love for animals.The best online zoo I&apos;ve met. My son delighted very much ljves to watch gouillas.<br>The best online zoo I&apos;ve met. My son delighted very much ljves to watch gouillas. Online zoo is one jf the ways to instill a love for animals.The best online zoo I&apos;ve met. My son delighted very much ljves to watch gouillas. Online zoo is one jf the ways to instill a love for animals.<br>The best online zoo I&apos;ve met. My son delighted very much ljves to watch gouillas. Online zoo is one jf the ways to instill a love for animals.The best online zoo I&apos;ve met. My son delighted very much ljves to watch gouillas. Online zoo is one jf the ways to instill a love for animals."
+    },
+    {
+        name: "Fredericka Michelin",
+        img: "../../assets/images/frederica.png",
+        location: "Local Austria",
+        time: "Yesterday",
+        comment: "The best online zoo I&apos;ve met. My son delighted very much ljves to watch gouillas. Online zoo is one jf the ways to instill a love for animals.The best online zoo I&apos;ve met. My son delighted very much ljves to watch gouillas. Online zoo is one jf the ways to instill a love for animals.<br>The best online zoo I&apos;ve met. My son delighted very much ljves to watch gouillas. Online zoo is one jf the ways to instill a love for animals.The best online zoo I&apos;ve met.<br>The best online zoo I&apos;ve met. My son delighted very much ljves to watch gouillas. Online zoo is one jf the ways to instill a love for animals.The best online zoo I&apos;ve met. My son delighted very much ljves to watch gouillas. Online zoo is one jf the ways to instill a love for animals."
+    },
+    {
+        name: "Mila Riksha",
+        img: "../../assets/images/mila.png",
+        location: "Local Austria",
+        time: "Yesterday",
+        comment: "My son delighted very much ljves to watch gouillas. Online zoo is one jf the ways to instill a love for animals.The best online zoo I&apos;ve met. My son delighted very much ljves to watch gouillas. Online zoo is one jf the ways to instill a love for animals.The best online zoo I&apos;ve met. My son delighted very much ljves to watch gouillas. Online zoo is one jf the ways to instill a love for animals.The best online zoo I&apos;ve met. My son delighted very much ljves to watch gouillas.<br>The best online zoo I&apos;ve met. My son delighted very much ljves to watch gouillas. Online zoo is one jf the ways to instill a love for animals.The best online zoo I&apos;ve met. My son delighted very much ljves to watch gouillas. Online zoo is one jf the ways to instill a love for animals."
+    }
+];
+
+const testimonials = document.querySelector(".testimonials-cards");
+testimonials.append(...createComments());
+
+function createComments() {
+    shuffle(comments);
+    const newComments = [];
+
+    for (let i = 0; i < 11; i++) {
+        const index =  i % 4;
+        const comment = document.createElement('div');
+        comment.classList.add('testimonials-card');
+        comment.innerHTML = `
+        <span class="person__image"></span>
+        <div class="testimonials-card__person-info">
+            <p class="person__name">${comments[index].name}</p>
+            <p class="person__location">${comments[index].location}</p>
+            <p class="person__dot">&middot;</p>
+            <p class="person__comment-time">${comments[index].time}</p>
+        </div>
+        <p class="testimonials-card__comment">${comments[index].comment}</p>`;
+        const img = comment.querySelector(".person__image");
+        img.style.backgroundImage = `url(${comments[index].img})`;
+        newComments.push(comment);
+    };
+    
+    return newComments;
+}
+
+const testimonialScroll = document.querySelector(".scroll-line");
+testimonialScroll.addEventListener("input", moveTestimonials);
+
+function moveTestimonials() {
+    const testimonialsCard = document.querySelector(".testimonials-card");
+    const moveDistance = testimonialScroll.value * (testimonialsCard.offsetWidth + 29);
+    testimonials.style.transform = `translateX(-${moveDistance}px)`;
+    testimonials.style.transition = "1s";
 }

@@ -50,6 +50,10 @@ a:hover {
   text-emphasis-color: transparent;
 }
 
+.overflow {
+  overflow: hidden;
+}
+
 html {
   font-size: 10px;
 }
@@ -714,10 +718,6 @@ p,
   .animals-cards__wrapper {
     padding-bottom: 60px;
   }
-}
-
-.overflow {
-  overflow: hidden;
 }
 
 .animal-cards__animals-scroll {
@@ -1576,8 +1576,10 @@ p,
 
 .testimonials-cards {
   display: flex;
-  flex-direction: row;
-  justify-content: space-between;
+  flex-direction: column;
+  flex-wrap: wrap;
+  column-gap: 29px;
+  height: 391px;
 }
 @media (max-width: 1000px) {
   .testimonials-cards {
