@@ -301,9 +301,6 @@ function showPopUpComment(e) {
     const img = popUp.querySelector(".comment-card__image");
     img.style.backgroundImage = `url(${targetInformation.img})`;
 
-    const html = document.querySelector('html');
-    html.style.overflow = 'hidden';
-
     const closeIcon = document.querySelector(".pop-up__close");
     closeIcon.addEventListener("click", closePopUp);
 
@@ -315,8 +312,5 @@ function closePopUp(e) {
     if(!e.target.closest(".pop-up__comment-card")) {
         const popUp = document.querySelector(".pop-up-shadow")
         document.body.removeChild(popUp);
-    
-        const html = document.querySelector('html');
-        html.style.overflow = 'visible';
     }
 }
