@@ -1,0 +1,105 @@
+.promo__wrapper {
+    display: grid;
+    grid-template-columns: 50% 50%;
+
+    @include small-desktop {
+        grid-template-columns: 45% 55%;
+    }
+
+    @include tablet {
+        grid-template-columns: 50% 50%;
+        position: relative;
+        padding-top: 34px
+    }
+}
+
+.promo {
+    @include image(url("../images/GiantPanda.jpg"), auto, auto);
+    background-size: cover;
+}
+
+.promo__content {
+    grid-column: 2;
+    padding-left: 73px;
+    @include image(url("../images/ellipse.png"), 465px, 465px, 0px 12px);
+
+    height: 700px;
+    width: max-content;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    overflow: visible;
+
+    @include small-desktop {
+        height: 504px;
+        padding-left: 59px;
+        background-size: 367px;
+        background-position: 0px -11px;
+    }
+
+    @include tablet {
+        height: 373px;
+        padding-left: 37px;
+        background-size: 238px;
+        background-position: 0px 10px;
+    }
+
+    @include mobile {
+        height: 221px;
+        padding-left: 19px;
+        background-size: 119px;
+        background-position: 0px 22px;
+    }
+}
+
+.promo__title {
+    margin: 86px 0px 60px auto;
+    padding: 0px;
+    display: inline-block;
+    width: 500px;
+    height: 400px;
+
+    text-align: center;
+    color: $color-white;
+    text-transform: uppercase;
+
+    @include small-desktop {
+        font-size: 8.5rem;
+        width: 400px;
+        height: 320px;
+        margin: 43px 0px 40px auto;
+    }
+
+    @include tablet {
+        font-size: 5.4rem;
+        width: 256px;
+        height: 204px;
+        margin: 48px 0px 86px auto;
+    }
+
+    @include mobile {
+        font-size: 2.8rem;
+        width: 128px;
+        height: 102px;
+        margin: 41px 0px 43px auto;
+    }
+}
+
+.favorite {
+    color: $color-yellow;
+}
+
+.promo__button {
+    @include tablet {
+        position: absolute;
+        left: 0px;
+        bottom: 40px;
+    }
+    
+    @include mobile {
+        bottom: -74px;
+    }
+}
+
+

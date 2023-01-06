@@ -1,0 +1,23 @@
+{
+  "name": "online-zoo",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "style": "sass --watch assets/styles/style.scss assets/styles/style.css",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/VTeramin/Online-zoo.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/VTeramin/Online-zoo/issues"
+  },
+  "homepage": "https://github.com/VTeramin/Online-zoo#readme",
+  "dependencies": {
+    "normalize.css": "^8.0.1"
+  }
+}

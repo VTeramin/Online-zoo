@@ -1,0 +1,16 @@
+.wrapper {
+    max-width: 1160px;
+    margin: 0 auto;
+
+    @include small-desktop {
+        max-width: 940px;
+    }
+
+    @include tablet {
+        max-width: 600px;
+    }
+
+    @include mobile {
+        max-width: 300px;
+    }
+}

@@ -1,0 +1,77 @@
+.backstage {
+    position: relative;
+}
+
+.backstage__wrapper {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+
+    padding-top: 140px;
+    padding-bottom: 180px;
+    overflow: visible;
+
+    @include small-desktop {
+        padding-top: 109px;
+        padding-bottom: 142px;
+    }
+
+    @include tablet {
+        padding-top: 60px;
+        padding-bottom: 80px;
+    }
+
+    @include mobile {
+        padding-top: 104px;
+        padding-bottom: 40px;
+    }
+}
+
+.backstage__image {
+    width: 609px;
+    height: 403px;
+    @include image(url("../images/bamboo-cap.jpg"), 609px, 403px);
+
+    @include small-desktop {
+        width: 455px;
+        height: 408px;
+    }
+
+    @include tablet {
+        display: none;
+    }
+}
+
+.backstage__article {
+    width: 465px;
+    height: 403px;
+    display: grid;
+    grid-template-rows: 139px 96px 63px 105px;
+
+    color: $color-black-blue;
+
+    @include small-desktop {
+        grid-template-rows: 136px 96px 63px 108px;
+    }
+
+    @include tablet {
+        width: 495px;
+        height: 367px;
+        grid-template-rows: 136px 72px 49px 110px;
+    }
+
+    @include mobile {
+        width: 495px;
+        height: 367px;
+        grid-template-rows: 68px 83px 39px 198px;
+    }
+}
+
+.backstage__title{
+    margin: 0;
+
+    @include mobile {
+        font-size: 2.4rem;
+    }
+}
