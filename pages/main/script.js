@@ -265,3 +265,58 @@ function moveTestimonials() {
     testimonials.style.transform = `translateX(-${moveDistance}px)`;
     testimonials.style.transition = "1s";
 }
+
+// Testimonials comment pop up
+
+const testimonialCards = document.querySelectorAll(".testimonials-card");
+testimonialCards.forEach(testimonialCard => testimonialCard.addEventListener("click", showPopUpComment));
+
+function showPopUpComment(e) {
+    const target = e.target.closest(".testimonials-card");
+    const targetName = target.querySelector(".person__name").textContent;
+    let targetInformation = {};
+    for(let i = 0; i < comments.length; i++) {
+        if(comments[i].name === targetName) {
+            targetInformation = comments[i];
+        }
+    }
+
+    const popUp = document.createElement('div');
+    popUp.classList.add('pop-up-shadow');
+    popUp.innerHTML = `
+    <div class="testimonials-pop-up">
+        <div class="pop-up__comment-card">
+            <span class="comment-card__image"></span>
+            <div class="comment-card__person-info">
+                <p class="person__name">${targetInformation.name}</p>
+                <p class="person__location">${targetInformation.location}</p>
+                <p class="person__dot">&middot;</p>
+                <p class="person__comment-time">${targetInformation.time}</p>  
+            </div>
+            <p class="comment-card__comment">${targetInformation.comment}</p>
+        </div>
+        <span class="pop-up__close"></span>
+    </div>`;
+    document.body.append(popUp);
+    const img = popUp.querySelector(".comment-card__image");
+    img.style.backgroundImage = `url(${targetInformation.img})`;
+
+    const html = document.querySelector('html');
+    html.style.overflow = 'hidden';
+
+    const closeIcon = document.querySelector(".pop-up__close");
+    closeIcon.addEventListener("click", closePopUp);
+
+    const shadow = document.querySelector(".pop-up-shadow");
+    shadow.addEventListener("click", closePopUp);
+}
+
+function closePopUp(e) {
+    if(!e.target.closest(".pop-up__comment-card")) {
+        const popUp = document.querySelector(".pop-up-shadow")
+        document.body.removeChild(popUp);
+    
+        const html = document.querySelector('html');
+        html.style.overflow = 'visible';
+    }
+}

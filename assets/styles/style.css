@@ -543,6 +543,102 @@ p,
   background-color: #4B9200;
 }
 
+.pop-up-shadow {
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  padding: auto;
+  background-color: rgba(60, 60, 60, 0.5);
+  z-index: 6;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.pop-up-shadow:hover {
+  cursor: pointer;
+}
+
+.testimonials-pop-up {
+  width: 320px;
+  height: 428px;
+  position: relative;
+  z-index: 7;
+  border-radius: 5px;
+}
+.testimonials-pop-up:hover {
+  cursor: pointer;
+}
+
+.pop-up__comment-card {
+  width: 268px;
+  height: 391px;
+  overflow: hidden;
+  border: 2px solid transparent;
+  border-radius: 20px;
+  background-image: linear-gradient(#F1F3F2, #F1F3F2), linear-gradient(315.75deg, rgba(254, 189, 171, 0.74) 30.06%, rgba(243, 169, 248, 0.66) 50.74%, #E0D8F0 80.49%, #EAF7FE 127.9%, #EAF7FE 149.54%), linear-gradient(315.75deg, rgba(254, 189, 171, 0.74) 30.06%, rgba(243, 169, 248, 0.66) 50.74%, #E0D8F0 80.49%, #EAF7FE 127.9%, #EAF7FE 149.54%);
+  background-origin: border-box;
+  background-clip: padding-box, border-box;
+  overflow: hidden;
+  background-color: #FFFFFF;
+  padding: 15px 15px 19px;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  gap: 10px;
+  position: absolute;
+  bottom: 17px;
+  left: 17px;
+}
+.pop-up__comment-card:hover {
+  cursor: auto;
+}
+
+.comment-card__image {
+  width: 37px;
+  height: 37px;
+  display: inline-block;
+}
+
+.comment-card__person-info {
+  width: 180px;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  gap: 6px;
+  color: #BDBDBD;
+}
+
+.person__name {
+  width: 100%;
+  color: #000000;
+}
+
+.comment-card__comment {
+  height: 308px;
+  overflow: hidden;
+  color: #767474;
+}
+
+.pop-up__close {
+  background-image: url("../icons/x_icon.svg");
+  width: auto;
+  height: auto;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 14px;
+  height: 14px;
+  content: "";
+  position: absolute;
+  top: 12px;
+  right: 10px;
+}
+.pop-up__close:hover {
+  cursor: pointer;
+}
+
 .animal-card {
   border: 1px solid transparent;
   border-radius: 5px;
@@ -1609,6 +1705,9 @@ p,
   flex-direction: row;
   flex-wrap: wrap;
   gap: 10px;
+}
+.testimonials-card:hover {
+  cursor: pointer;
 }
 .testimonials-card * {
   z-index: 1;
