@@ -1,0 +1,81 @@
+html {
+    font-size: 10px;
+}
+
+body {
+    font-size: 1.6rem;
+    font-family: 'Roboto', Verdana, sans-serif;
+    margin: 0;
+    overflow-x: hidden;
+}
+
+h1 {
+    @include font(700, 10.6rem, 75%);
+}
+
+.form__donation-range > * {
+    @include font(500, 2.6rem, 140%);
+}
+
+.button,
+.form-button, 
+.animal-card__type, 
+li, 
+.header__designer {
+    @include font(500, 1.6rem, 140%);
+}
+
+.pick-friend__text-1 {
+    @include font(500, 1.6rem, 130%);
+}
+
+h2 {
+    @include font(400, 4.8rem, 120%);
+}
+
+h3,
+.pop-info__name {
+    @include font(400, 3.6rem, 130%);
+}
+
+.subtitle {
+    @include font(400, 2.4rem, 120%);
+}
+
+.logo {
+    @include font(400, 1.9rem, 120%);
+}
+
+p,
+.payment-card__step,
+.email-input,
+.open-menu__navigation,
+.header__designer,
+.open-menu__designer {
+    @include font(400, 1.6rem, 140%);
+}
+
+.backstage__text,
+.pick-friend__text-2 {
+    @include font(400, 1.6rem, 130%);
+}
+
+.person__name {
+    @include font(400, 1.6rem, 100%);
+}
+
+.open-menu__logo {
+    @include font(400, 1.5rem, 120%);
+}
+
+.animal-card__origin,
+.testimonials-card > .testimonials-card__comment,
+.testimonials-card__person-info > .person__location,
+.testimonials-card__person-info > .person__dot,
+.testimonials-card__person-info > .person__comment-time {
+    @include font(300, 1.5rem, 120%);
+}
+
+.footer__designer-info {
+    @include font(100, 1.6rem, 130%);
+}

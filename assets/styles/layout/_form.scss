@@ -1,0 +1,36 @@
+.email-input {
+    width: 228px;
+    height: 42px;
+    padding: 10px 7px 10px 10px;
+    
+    @include gradient-border($gradient-orange, 2px, $color-black, 0.7px);
+
+    color: $color-gray-4;
+
+    &:focus:invalid {
+        outline: none;
+        border-color: $color-red;
+    }
+    &:valid {
+        outline: none;
+        border-color: $color-green;
+        background: $color-black;
+    }
+
+}
+
+.form-button {
+    cursor: pointer;
+    width: 129px;
+    height: 42px;
+    border: 1px solid $color-black-blue;
+    border-radius: 5px;
+    background-color: $color-gray-light;
+    color: $color-black;
+
+    &:active,
+    &:hover {
+        border-color: $color-green;
+        color: $color-green;
+    }
+}

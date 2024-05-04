@@ -1,0 +1,39 @@
+html {
+    scroll-behavior: smooth;
+    overflow-x: hidden;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+h1, h2, h3, p {
+    margin: 0;
+}
+
+ul {
+    padding: 0px;
+    margin: 0px;
+}
+
+li {
+    list-style-type: none;
+}
+
+a  {
+    color: $color-white;
+    text-decoration: none;
+
+    &:hover {
+        cursor: pointer;
+        background: $gradient-orange;
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        background-clip: text;
+        text-emphasis-color: transparent;
+    }
+}
+
+.overflow {
+    overflow: hidden;
+}

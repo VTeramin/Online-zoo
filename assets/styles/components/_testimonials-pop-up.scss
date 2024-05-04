@@ -1,0 +1,97 @@
+.pop-up-shadow {
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    padding: auto;
+    background-color: $color-open-menu;
+    z-index: 6;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    &:hover {
+        cursor: pointer;
+    }
+}
+
+.testimonials-pop-up {
+    width: 320px;
+    height: 428px;
+    position: relative;
+    z-index: 7;
+
+    border-radius: 5px;
+
+    &:hover {
+        cursor: pointer;
+    }
+}
+
+.pop-up__comment-card {
+    width: 268px;
+    height: 391px;
+    overflow: hidden;
+    @include gradient-border($gradient-pink, 20px, $color-gray-light, 2px);
+    background-color: $color-white;
+
+    padding: 15px 15px 19px;
+
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 10px;
+
+    position: absolute;
+    bottom: 17px;
+    left: 17px;
+
+    &:hover {
+        cursor: auto;
+    }
+}
+
+.comment-card__image {
+    width: 37px;
+    height: 37px;
+    display: inline-block;
+}
+
+.comment-card__person-info {
+    width: 180px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 6px;
+
+    color: $color-gray-4;
+}
+
+.person__name {
+    width: 100%;
+    color: $color-black;
+}
+
+.comment-card__comment {
+    height: 308px;
+    overflow: hidden;
+    color: $color-gray;
+}
+
+.pop-up__close {
+    @include image(url("../icons/x_icon.svg"), auto, auto);
+    background-size: cover;
+    width: 14px;
+    height: 14px;
+    content: "";
+
+    &:hover {
+        cursor: pointer;
+    }
+
+    position: absolute;
+    top: 12px;
+    right: 10px;
+}

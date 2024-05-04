@@ -1,0 +1,13 @@
+.navigation {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.header__navigation .navigation__link:first-child > a {
+    color: $color-orange;
+}
+
+.footer__navigation .navigation__link:last-child > a {
+    color: $color-orange;
+}

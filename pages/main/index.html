@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Online zoo</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../../assets/styles/style.css">
+    <link rel="shortcut icon" href="../../assets/icons/favicon.ico" type="image/x-icon">
+</head>
+<body>
+    <header class="header" id="header">
+        <div class="wrapper header__wrapper">
+            <a href="https://vteramin.github.io/Online-zoo/pages/main/" class="logo header__logo">PetStory online<span class="bamboo"></span></a>
+            <nav class="header__navigation">
+                <ul class="navigation">
+                    <li class="navigation__link"><a href="#promo">About</a></li>
+                    <li class="navigation__link"><a href="#backstage">Map</a></li>
+                    <li class="navigation__link"><a href="#animals-cards">Zoos</a></li>
+                    <li class="navigation__link"><a href="#pick-friend">Donate</a></li>
+                    <li class="navigation__link"><a href="#footer">Contact us</a></li>
+                </ul>
+            </nav>
+            <a href="https://www.figma.com/file/jfEFwkXVj1WRq7sUHDr8os/PetStory-online" class="header__designer">Designed by ©</a>
+            <span class="header__burger"></span>
+        </div>
+    </header>
+    <section class="promo" id="promo">
+        <div class="wrapper promo__wrapper">
+            <div class="promo__content">
+                <h1 class="promo__title">Watch your <span class="favorite">favorite</span> animal online</h1>
+                <button class="button button-rounded promo__button">watch online</button>
+            </div>
+        </div>
+    </section>
+    <section class="backstage" id="backstage">
+        <div class="wrapper backstage__wrapper">
+            <span class="backstage__image"></span>
+            <div class="backstage__article">
+                <h2 class="backstage__title">The Backstage of the Wilderness World.</h2>
+                <p class="backstage__text">The site was founded on the basis of a volunteer movement to protect and care for animals.</p>
+                <p class="subtitle">How it works</p>
+                <p>The main goal is to help the animals, as well as the nature reserves and zoos where they are kept. We are currently working on video projects targeting pandas in China, eagles on an island near Los Angeles, alligators in Florida and gorillas in the Congo. These have a total of more than 1,500 mammals and reptiles.</p>
+            </div>
+        </div>
+    </section>
+    <div class="animals-cards" id="animals-cards">
+        <div class="wrapper animals-cards__wrapper">
+            <div class="overflow">
+                <div class="animal-cards__animals-scroll">
+                    <div class="animal-card">
+                        <span class="animal-card__image"></span>
+                        <div class="pop-info">
+                            <p class="pop-info__name">Giant Pandas</p>
+                            <p class="pop-info__location">Native to Southwest China</p> 
+                        </div>
+                        <div class="animal-card__info">
+                            <p class="animal-card__type">Giant Pandas</p>
+                            <p class="animal-card__origin">Native to Southwest China</p>
+                        </div>
+                        <span class="animal-card__type-icon type-vegeterian"></span>
+                    </div>
+                    <div class="animal-card">
+                        <span class="animal-card__image"></span>
+                        <div class="pop-info">
+                            <p class="pop-info__name">Eagles</p>
+                            <p class="pop-info__location">Native to South America</p> 
+                        </div>
+                        <div class="animal-card__info">
+                            <p class="animal-card__type">Eagles</p>
+                            <p class="animal-card__origin">Native to South America</p>
+                        </div>
+                        <span class="animal-card__type-icon type-non-vegeterian"></span>
+                    </div>
+                    <div class="animal-card">
+                        <span class="animal-card__image"></span>
+                        <div class="pop-info">
+                            <p class="pop-info__name">Gorillas</p>
+                            <p class="pop-info__location">Native to Congo</p> 
+                        </div>
+                        <div class="animal-card__info">
+                            <p class="animal-card__type">Gorillas</p>
+                            <p class="animal-card__origin">Native to Congo</p>
+                        </div>
+                        <span class="animal-card__type-icon type-vegeterian"></span>
+                    </div>
+                    <div class="animal-card">
+                        <span class="animal-card__image"></span>
+                        <div class="pop-info">
+                            <p class="pop-info__name">Two-toed Sloth</p>
+                            <p class="pop-info__location">Mesoamerica, South America</p> 
+                        </div>
+                        <div class="animal-card__info">
+                            <p class="animal-card__type">Two-toed Sloth</p>
+                            <p class="animal-card__origin">Mesoamerica, South America</p>
+                        </div>
+                        <span class="animal-card__type-icon type-vegeterian"></span>
+                    </div>
+                    <div class="animal-card">
+                        <span class="animal-card__image"></span>
+                        <div class="pop-info">
+                            <p class="pop-info__name">Cheetahs</p>
+                            <p class="pop-info__location">Native to Africa</p> 
+                        </div>
+                        <div class="animal-card__info">
+                            <p class="animal-card__type">Cheetahs</p>
+                            <p class="animal-card__origin">Native to Africa</p>
+                        </div>
+                        <span class="animal-card__type-icon type-non-vegeterian"></span>
+                    </div>
+                    <div class="animal-card">
+                        <span class="animal-card__image"></span>
+                        <div class="pop-info">
+                            <p class="pop-info__name">Penguins</p>
+                            <p class="pop-info__location">Native to Antarctica</p> 
+                        </div>
+                        <div class="animal-card__info">
+                            <p class="animal-card__type">Penguins</p>
+                            <p class="animal-card__origin">Native to Antarctica</p>
+                        </div>
+                        <span class="animal-card__type-icon type-non-vegeterian"></span>
+                    </div>
+                </div>
+            </div>
+            <button class="button arrow-button button-left">
+                <span class="arrow-left"></span>
+            </button>
+            <button class="button arrow-button button-right">
+                <span class="arrow-right"></span>
+            </button>
+            <button class="button button-rounded">Choose your favorite</button>
+        </div>
+    </div>
+    <section class="pick-friend" id="pick-friend">
+        <div class="wrapper pick-friend__wrapper">
+            <h2 class="pick-friend__title">Pick and feed a friend</h2>
+            <p class="pick-friend__subtitle subtitle">We know the animals bring you joy, and in these extraordinary times, we&apos;re glad.</p>
+            <p class="pick-friend__text-1">During a time when the COVID-19 epidemic is touching all of our lives, we&apos;re proud and glad that people around the&nbsp;world find joy in PetStory.</p>
+            <p class="pick-friend__text-2">Even though the zoo has reopened, we need you now more than ever to help us deal with these problems. Please consider a gift to our <a class="emergency-support-fund">Emergency Support Fund</a> .</p>
+            <h3 class="payment__title">How it works</h3>
+            <div class="payment-cards">
+                <div class="payment-card">
+                    <span class="payment-card__icon step-one"></span>
+                    <p class="payment-card__step">Pay with card</p>
+                </div>
+                <span class="payment-arrow"></span>
+                <div class="payment-card">
+                    <span class="payment-card__icon step-two"></span>
+                    <p class="payment-card__step">Payment goes to the zoo</p>
+                </div>
+                <span class="payment-arrow"></span>
+                <div class="payment-card">
+                    <span class="payment-card__icon step-three"></span>
+                    <p class="payment-card__step">Your favourite animal gets delicious dish</p>
+                </div>
+            </div>
+            <button class="button button-rounded feed-button">Feed a friend now</button>
+        </div>
+    </section>
+    <section class="testimonials">
+        <div class="wrapper testimonials__wrapper">
+            <h3 class="testimonials__title">Testimonials</h3>
+            <div class="overflow">
+                <div class="testimonials-cards"></div>
+            </div>
+            <input type="range" min="0" max="7" value="0" step="0" class="scroll-line">
+            <button class="button button-squared feedback-button">Leave feedback</button>
+        </div>
+    </section>
+    <footer class="footer" id="footer">	
+        <div class="wrapper footer__wrapper">
+            <a href="#header" class="logo footer-logo">PetStory online<span class="bamboo"></span></a>
+            <div class="footer-socials">
+                <a href="https://ru-ru.facebook.com/" class="social">
+                    <span class="social__logo facebook-logo"></span>
+                    <p class="social__name">Facebook</p>
+                </a>
+                <a href="https://twitter.com/?lang=ru" class="social">
+                    <span class="social__logo twitter-logo"></span>
+                    <p class="social__name">Twitter</p>
+                </a>
+                <a href="https://www.instagram.com/" class="social">
+                    <span class="social__logo instagram-logo"></span>
+                    <p class="social__name">Instagram</p>
+                </a>
+                <a href="https://www.youtube.com/" class="social">
+                    <span class="social__logo youtube-logo"></span>
+                    <p class="social__name">YouTube</p>
+                </a>
+            </div>
+            <button class="button button-squared donate-button">Donate for volunteers</button>
+            <a href="https://www.figma.com/file/jfEFwkXVj1WRq7sUHDr8os/PetStory-online" class="footer__designer-info">Designed by Alisa Samborskaya<br>©RSSchool & ©Yem Digital 2021</a>
+            <nav class="footer__navigation">
+                <ul class="navigation">
+                    <li class="navigation__link"><a href="#promo">About</a></li>
+                    <li class="navigation__link"><a href="#backstage">Map</a></li>
+                    <li class="navigation__link"><a href="#animals-cards">Zoos</a></li>
+                    <li class="navigation__link"><a href="#footer">Contact us</a></li>
+                </ul>
+            </nav>
+            <div class="subscribe">
+                <p class="subscribe__subtitle subtitle">Subscribe to our news</p>
+                <form action="/my-handling-form-page" method="post" class="subscribe__form">
+                    <input type="email" name="user_email" placeholder="Enter your email" class="email-input" required>
+                    <button type="submit" class="form-button">Submit</button>
+                </form>
+            </div>
+        </div>
+    </footer>
+    <script src="script.js"></script>
+</body>
+</html>

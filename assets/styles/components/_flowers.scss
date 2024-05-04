@@ -1,0 +1,119 @@
+.backstage__wrapper::after {
+    @include image(url("../images/flower_foto.png"), auto, auto);
+    background-size: cover;
+    width: 202px;
+    height: 605px;
+    content: "";
+
+    position: absolute;
+    right: 0px;
+    top: 12px;
+
+    @include small-desktop {
+        display: none;
+    }
+
+    @include tablet {
+        display: inline-block;
+        width: 165px;
+        height: 476px;
+        right: -30px;
+        top: 0px;
+    }
+
+    @include mobile {
+        width: 31px;
+        height: 217px;
+        background-position: left;
+        right: 0px;
+        top: 40px;
+    }
+}
+
+.animals-cards::after {
+    @include image(url("../images/palm_foto.png"), auto, auto);
+    background-size: cover;
+    width: 292px;
+    height: 460px;
+    content: "";
+
+    position: absolute;
+    left: 0px;
+    bottom: 0px;
+
+    @include small-desktop {
+        width: 194px;
+        height: 302px;
+    }
+
+    @include tablet {
+        width: 134px;
+        height: 202px;
+    }
+
+    @include mobile {
+        width: 40px;
+        height: 72px;
+    }
+}
+
+.animals-cards::before {
+    @include image(url("../images/strelitzia.png"), auto, auto);
+    background-size: cover;
+    width: 368px;
+    height: 275px;
+    content: "";
+
+    position: absolute;
+    right: 0px;
+    bottom: 0px;
+
+    @include small-desktop {
+        width: 241px;
+        height: 180px;
+    }
+
+    @include tablet {
+        width: 175px;
+        height: 131px;
+    }
+
+    @include mobile {
+        width: 85px;
+        height: 71px;
+        right: -16px;
+    }
+}
+
+.testimonials__wrapper::after {
+    @include image(url("../images/leav_foto.png"), auto, auto);
+    background-size: cover;
+    width: 247px;
+    height: 408px;
+    content: "";
+
+    position: absolute;
+    z-index: -1;
+    right: 0px;
+    bottom: -141px;
+
+    @include small-desktop {
+        bottom: -95px;
+        width: 200px;
+        height: 330px;
+    }
+
+    @include tablet {
+        bottom: -60px;
+        right: -5px;
+        width: 110px;
+        height: 180px;
+    }
+
+    @include mobile {
+        bottom: -35px;
+        right: -6px;
+        width: 60px;
+        height: 105px;
+    }
+}

@@ -1,0 +1,113 @@
+.payment__title {
+    width: max-content;
+    margin: 0px auto 40px;
+
+    @include tablet {
+        margin-bottom: 20px;
+    }
+
+    @include mobile {
+        font-size: 2.4rem;
+    }
+}
+
+.payment-cards {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+
+    width: 764px;
+    margin: 0px auto 60px;
+
+    position: relative;
+
+    @include tablet {
+        width: 600px;
+        margin-bottom: 40px;
+    }
+
+    @include mobile {
+        width: 168px;
+        row-gap: 20px;
+        flex-direction: column;
+        align-items: center;
+    }
+}
+
+.payment-card {
+    width: 168px;
+}
+
+.payment-card__icon {
+    width: 168px;
+    height: 168px;
+    display: inline-block;
+    @include gradient-border($gradient-orange, 5px);
+    &::after {
+        content: "";
+        display: inline-block;
+    }
+}
+
+.step-one::after {
+    @include image(url('../../assets/icons/pay.svg'), 168px, 168px);
+}
+
+.step-two::after {
+    @include image(url('../../assets/icons/zoo.svg'), 168px, 168px);
+}
+
+.step-three::after {
+    @include image(url('../../assets/icons/monkey.svg'), 168px, 168px);
+}
+
+.payment-card__step {
+    margin-top: 30px;
+
+    @include mobile {
+        margin-top: 10px;
+        height: 44px
+    }
+}
+
+.payment-arrow {
+    @include image(url('../../assets/icons/payment_arrow.svg'), 69px, 36px);
+    margin-top: calc((168px - 36px) / 2);
+    margin-bottom: auto;
+
+    @include tablet {
+        @include image(url('../../assets/icons/payment_arrow_tablet.svg'), auto, auto);
+        width: 90px;
+        height: 28px;
+        background-size: cover;
+        position: absolute;
+        top: -16px;
+        margin: 0px;
+    }
+
+    @include mobile {
+        transform: rotate(85deg);
+    }
+}
+
+@include tablet {
+    .payment-cards > *:nth-child(2) {
+        left: 145px;
+    }
+
+    .payment-cards > *:nth-child(4) {
+        right: 145px;
+    }
+}
+
+@include mobile {
+    .payment-cards > *:nth-child(2) {
+        top: 194px;
+        left: 140px;
+    }
+
+    .payment-cards > *:nth-child(4) {
+        top: 440px;
+        right: -62px;
+    }
+}

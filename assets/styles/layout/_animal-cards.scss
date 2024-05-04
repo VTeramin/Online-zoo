@@ -1,0 +1,96 @@
+.animals-cards {
+    position: relative;
+}
+
+.animals-cards__wrapper {
+    padding-bottom: 100px;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+
+    @include small-desktop {
+        padding-bottom: 140px;
+    }
+
+    @include tablet {
+        padding-bottom: 100px;
+    }
+
+    @include mobile {
+        padding-bottom: 60px;
+    }
+}
+
+.animal-cards__animals-scroll {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    column-gap: 30px;
+
+    margin-bottom: 80px;
+    width: 1158px;
+    height: 872px;
+
+    @include small-desktop {
+        width: 940px;
+        height: 801px;
+    }
+
+    @include tablet {
+        width: 600px;
+        height: 756px;
+        margin-bottom: 60px;
+    }
+
+    @include mobile {
+        width: 285px;
+        height: 1388px;
+        row-gap: 20px;
+        margin-bottom: 20px;
+    }
+}
+
+.arrow-button {
+    position: absolute;
+    top: calc(426px + 10px - 31px);
+
+    @include small-desktop {
+        top: calc(354px + 46px - 31px);
+    }
+
+    @include tablet {
+        top: calc(332px + 46px - 31px);
+    }
+
+    @include mobile {
+        display: none;
+    }
+}
+
+.button-left {
+    left: -81px;
+
+    @include small-desktop {
+        left: 323px;
+    }
+
+    @include tablet {
+        left: 223px;
+    }
+}
+
+.button-right {
+    right: -81px;
+
+    @include small-desktop {
+        right: 323px;
+    }
+
+    @include tablet {
+        right: 223px;
+    }
+}
+
